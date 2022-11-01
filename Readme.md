@@ -12,7 +12,8 @@ Our goal with this endeavour is to improve the overall experience of newcomers t
 
  
 # Curre Interactive Prototype
-> https://www.figma.com/file/OUxuVtfOXXkNBhhuScQGuE/Curre?node-id=427%3A2
+> https://www.figma.com/proto/OUxuVtfOXXkNBhhuScQGuE/Curre?page-id=0%3A1&node-id=1%3A2&viewport=1879%2C354%2C0.67&scaling=scale-down&starting-point-node-id=1%3A2
+>https://www.figma.com/proto/OUxuVtfOXXkNBhhuScQGuE/Curre?page-id=427%3A2&node-id=431%3A56&viewport=79%2C546%2C0.13&scaling=scale-down&starting-point-node-id=427%3A866
 
 # License
 
