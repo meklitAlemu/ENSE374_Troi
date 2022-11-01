@@ -11,6 +11,9 @@ We have observed that there is an overwhelming amount of considerations to be ma
 Our goal with this endeavour is to improve the overall experience of newcomers to running while ensuring that they will be safe and healthy whilst running.
 
  
+# Curre Interactive Prototype
+> https://www.figma.com/file/OUxuVtfOXXkNBhhuScQGuE/Curre?node-id=427%3A2
+
 # License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
