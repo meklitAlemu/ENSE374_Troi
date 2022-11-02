@@ -16,6 +16,9 @@ Our goal with this endeavour is to improve the overall experience of newcomers t
 
 * [Mobile Prototype](https://www.figma.com/proto/OUxuVtfOXXkNBhhuScQGuE/Curre?page-id=427%3A2&node-id=431%3A56&viewport=79%2C546%2C0.13&scaling=scale-down&starting-point-node-id=427%3A866)
 
+# User Questionaire
+* [Provide Feedback Here](https://forms.gle/SPW9H65NzHcwGwBD6)
+
 # License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
