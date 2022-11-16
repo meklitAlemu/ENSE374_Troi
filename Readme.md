@@ -19,6 +19,8 @@ Our goal with this endeavour is to improve the overall experience of newcomers t
 # User Questionaire
 * [Provide Feedback Here](https://forms.gle/SPW9H65NzHcwGwBD6)
 
+# Demo-Presentation
+<img src="https://i.postimg.cc/FK9DW6Cj/image-2022-11-15-180749586.png" width="128"/>
 # License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
