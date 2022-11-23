@@ -64,6 +64,35 @@
   .bg-grey {
   background-color: #f6f6f6;
   }
+  .slideanim {visibility:hidden;}
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
     </style>
 
 <body>
@@ -88,14 +117,14 @@
       </div>
     </div>
   </nav>
-<div class="jumbotron text-center">
+<div class="jumbotron text-center slideanim">
   <h1>Curre</h1>
   <p>Curre is a company dedicated to increasing the accessibility of fitness for all individuals.</p>
   <div class="d-grid gap-2 col-6 mx-auto">
     <button class="btn btn-lg btn-primary" type="button">Visit our Github Here</button>
   </div>
 </div>
-<div class="container-fluid" id="description">
+<div class="container-fluid slideanim" id="description">
     <div class="row">
         <div class="col-sm-8">
             <h2>Project Description</h2>
@@ -109,12 +138,12 @@
           </div>
     </div>
 </div>
-  <div class="container-fluid bg-grey">
+  <div class="container-fluid bg-grey slideanim">
     <h2>Business Need and Opportunity</h2>
     <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
     <p><strong>VISION:</strong> Our vision Lorem ipsum..
   </div>
-  <div class="container-fluid text-center" id="prototype">
+  <div class="container-fluid text-center slideanim" id="prototype">
     <h2>PROTOTYPES</h2>
     <h4>Our initial MVP envisionings</h4>
     <br>
@@ -137,13 +166,13 @@
     </div>
       <br><br>
   </div>
-  <div class="container-fluid" id="demo">
+  <div class="container-fluid slideanim" id="demo">
   <div class="row text-center">
     <h2>PROJECT DEMO PRESENTATION</h2>
   <iframe width="887" height="499" src="https://www.youtube.com/embed/fegAcU4udMg" title="Curee Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   </div>
-  <div class="container-fluid text-center bg-grey" id="team">
+  <div class="container-fluid text-center bg-grey slideanim" id="team">
     <h2>OUR TEAM</h2>
     <h4>Group Troi</h4>
     <div class="row text-center">
@@ -170,7 +199,7 @@
       </div>
   </div>
 </div>
-<div class="container-fluid text-center" id="vlogs">
+<div class="container-fluid text-center slideanim" id="vlogs">
     <div class="row">
         <div class="col-sm-3"> 
             <iframe width="50%" height="50%" src="https://www.youtube.com/embed/eQzDJ_2y5vM" title="Vlog# 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>   
@@ -184,4 +213,32 @@
     </div>
 </div>
 </body>
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    
+       // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+    
+        // Prevent default anchor click behavior
+        event.preventDefault();
+    
+        // Store hash
+        var hash = this.hash;
+    
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+    
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+    </script>
+    
 </html>
