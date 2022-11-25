@@ -7,14 +7,14 @@ This document gives instructions on how to install and run our [Curre](https://c
 **Important**: running the project locally will require the installation of Node.js and Mongodb.
 Installation guides can be found below.
 
-1. [Download Node.Js for Windows, Mac OS, and Linux here](https://nodejs.org/en/download/)
+1. [Download Node.Js for Windows, Mac OS, and Linux here.](https://nodejs.org/en/download/)<br>
     Check successful download with the following command in `powershell`.
     ```
     node --version
     ```
 
 2. [Download Mongodb here](https://www.mongodb.com/try/download/community-kubernetes-operator)
-    [Install Mongosh here](https://www.mongodb.com/try/download/shell) and copy the files into your Mongodb bin folder.
+    [Install Mongosh here](https://www.mongodb.com/try/download/shell) and copy the files into your Mongodb bin folder.<br>
     Check successful download with the following command in `powershell`.
     ```
     & "C:\Program Files\MongoDB\Server\6.0\bin\mongosh.exe" --version
@@ -22,7 +22,7 @@ Installation guides can be found below.
 
 ### Installing the Curre files
 
-3. [Download files from the github here directly](https://github.com/meklitAlemu/ENSE374_Troi.git)
+3. [Download files from the github here directly.](https://github.com/meklitAlemu/ENSE374_Troi.git)<br>
     Or run the following command in the `Github CLI`
     ```
     gh repo clone meklitAlemu/ENSE374_Troi
@@ -44,9 +44,16 @@ Installation guides can be found below.
     * passport-local
     * passport-local-mongoose
 
-5. Run the project via the command below and it will run locally on your system
+5. Create an `.env` file with the following environment variables.<br>
+    Sample env file:
+    ```
+    DB_HOST=
+    DB_USER=
+    SECRET=
+    ```
+
+6. Run the project via the command below and it will run locally on your system.
     ```
     node index.js
     ```
 
-### Note the ENV file...
