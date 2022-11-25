@@ -1,20 +1,20 @@
 ## Installing and Running Project Files
 
-This document gives instructions on how to install and run our [Curre]("https://curre-ense.herokuapp.com/about") files locally.
+This document gives instructions on how to install and run our [Curre](https://curre-ense.herokuapp.com/about) files locally.
 
-### All Systems(Windows, Mac OS X, and Linux)
+### All Systems (Windows, Mac OS X, and Linux)
 
 **Important**: running the project locally will require the installation of Node.js and Mongodb.
 Installation guides can be found below.
 
-1. [Download Node,Js for Windows, Mac OS, and Linux here]("https://nodejs.org/en/download/")
+1. [Download Node.Js for Windows, Mac OS, and Linux here](https://nodejs.org/en/download/)
     Check successful download with the following command in `powershell`.
     ```
     node --version
     ```
 
-2. [Download Mongodb here]("https://www.mongodb.com/try/download/community-kubernetes-operator")
-    [Install Mongosh here]("https://www.mongodb.com/try/download/shell") and copy the files into your Mongodb bin folder.
+2. [Download Mongodb here](https://www.mongodb.com/try/download/community-kubernetes-operator)
+    [Install Mongosh here](https://www.mongodb.com/try/download/shell) and copy the files into your Mongodb bin folder.
     Check successful download with the following command in `powershell`.
     ```
     & "C:\Program Files\MongoDB\Server\6.0\bin\mongosh.exe" --version
@@ -22,7 +22,7 @@ Installation guides can be found below.
 
 ### Installing the Curre files
 
-3. [Download files from the github here directly]("https://github.com/meklitAlemu/ENSE374_Troi.git")
+3. [Download files from the github here directly](https://github.com/meklitAlemu/ENSE374_Troi.git)
     Or run the following command in the `Github CLI`
     ```
     gh repo clone meklitAlemu/ENSE374_Troi
