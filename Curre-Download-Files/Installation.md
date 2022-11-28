@@ -57,3 +57,25 @@ Installation guides can be found below.
     node index.js
     ```
 
+## Advanced
+
+In order to work with our remote database and website host, follow the instructions below. Please note that passwords to these resources must be requested from us directly.
+
+### Remote Servers (Mongodb Atlas and Heroku)
+
+1. [Install Heroku here]() <br>
+    Check successful download with the following command in `powershell` note that you may need to restart your.
+    ```
+    heroku --version
+    ```
+    Create an account and log in to begin making deployments.
+
+2. Request permission to collaborate on the project and clone our files from heroku to begin deployment.
+    ```
+    heroku git:clone -a curre-ense 
+    cd curre-ense
+    ```
+
+### Procfiles are Heroku configuration files
+Sample Procfile:
+
