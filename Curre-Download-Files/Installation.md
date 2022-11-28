@@ -50,6 +50,7 @@ Installation guides can be found below.
     DB_HOST=
     DB_USER=
     SECRET=
+    MONGODB_URI=
     ```
 
 6. Run the project via the command below and it will run locally on your system.
@@ -64,7 +65,7 @@ In order to work with our remote database and website host, follow the instructi
 ### Remote Servers (Mongodb Atlas and Heroku)
 
 1. [Install Heroku here]() <br>
-    Check successful download with the following command in `powershell` note that you may need to restart your.
+    Check successful download with the following command in `powershell` note that you may need to restart your computer.
     ```
     heroku --version
     ```
