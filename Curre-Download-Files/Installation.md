@@ -78,4 +78,10 @@ In order to work with our remote database and website host, follow the instructi
 
 ### Procfiles are Heroku configuration files
 Sample Procfile:
-
+```
+web: node <name>.js 
+SECRET=
+DB_HOST=
+DB_USER=
+MONGODB_URI=
+```

@@ -1,0 +1,80 @@
+<% if (heel_drop===false) {%>
+    <div class="container-fluid col-md-12" id="heelOptions">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <form action="/cushion" method="get">
+                    <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(17%); margin-left: -15%;"></div>
+                </form>
+            </div>
+            <div class="col-md-3" style="text-align: center;">
+                <h5>None</h5>
+                <form action="/hoption" method="post">
+                <div>
+                    <input src="/images/Heel_Drop-1.png" id="hOption1" type="image" name="submit" alt="submit"
+                        style="text-align: center;">
+                    <!--send chosen options through mvc post method-->
+                    <input name="hOp" value="false" hidden>
+                    <button class="btn btn-primary btn-circle btn-xl" type="submit" disabled></button>
+                </div>
+            </form>
+            </div>
+            <div class="col-md-3" style="text-align: center;">
+                <h5>Heel Drop</h5>
+                <form action="/hoption" method="post">
+                    <div>
+                        <input name="hOp" value="true" hidden>
+                        <!--create image submit buttons for the active buttons and none for the disabled-->
+                        <input src="/images/Heel_Drop-2.png" id="hOption2" type="image" name="submit" alt="submit"
+                            style="text-align: center;">
+                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <form action="/pronation" method="get">
+                    <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(17%); margin-left: 15%;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%}%>
+    <% if (heel_drop === true) {%>
+        <div class="container-fluid col-md-12" id="heelOptions">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <form action="/cushion" method="get">
+                        <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(17%); margin-left: -15%;"></div>
+                    </form>
+                </div>
+                <div class="col-md-3" style="text-align: center;">
+                    <h5>None</h5>
+                    <form action="/hoption" method="post">
+                    <div>
+                        <input src="/images/Heel_Drop-1.png" id="hOption1" type="image" name="submit" alt="submit"
+                            style="text-align: center;">
+                        <!--send chosen options through mvc post method-->
+                        <input name="hOp" value="false" hidden>
+                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active></button>
+                    </div>
+                    </form>
+                </div>
+                <div class="col-md-3" style="text-align: center;">
+                    <h5>Heel Drop</h5>
+                    <form action="/hoption" method="post">
+                        <div>
+                            <input name="hOp" value="true" hidden>
+                            <!--create image submit buttons for the active buttons and none for the disabled-->
+                            <input src="/images/Heel_Drop-2.png" id="hOption2" type="image" name="submit" alt="submit"
+                                style="text-align: center;">
+                            <button class="btn btn-primary btn-circle btn-xl" type="submit" disabled></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3" >
+                    <form action="/pronation" method="get">
+                        <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(17%); margin-left: 15%;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%}%>

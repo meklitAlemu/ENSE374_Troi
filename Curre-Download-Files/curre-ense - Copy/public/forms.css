@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital@1&display=swap');
+
+body,
+html {
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background-image: url(/images/wireframe.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pageName{
+    font-size: xx-large;
+    color: white;
+    letter-spacing: 7px;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.bg-light {
+    --bs-bg-opacity: 0;
+}
+#tooltip {
+    margin-right: 2%;
+    transform: translateY(-140%);
+    position: relative;
+}
+
+@media all and (max-width: 990px) {
+    #tooltip {
+        display: none;
+    }
+}
+
+@media all and (max-width: 990px) {
+    #terrainOptions {
+       transform: scale(60%);
+    }
+}
+@media all and (max-width: 990px) {
+    body,
+    html {
+            overflow: scroll;
+        }
+}
+
+a {
+    color: black;
+}
+
+.navbar-brand {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 39px;
+}
+.btn{
+    transform: translateY(-700%);
+    --bs-btn-bg:#D9D9D9;
+    --bs-btn-border-color: #D9D9D9;
+    --bs-btn-hover-bg: #060606;
+    --bs-btn-hover-border-color: #060606;
+    --bs-btn-disabled-color:  #060606;
+    --bs-btn-disabled-bg: #060606;
+    --bs-btn-disabled-border-color: #060606;
+    --bs-btn-disabled-opacity: 1;
+    --bs-btn-active-bg:#D9D9D9;
+    --bs-btn-active-border-color: #D9D9D9;
+}
+.btn-circle.btn-xl {
+    width: 30px;
+    height: 35px;
+    padding: 13px 18px;
+    border-radius: 60px;
+    font-size: 15px;
+    text-align: center;
+}
+#logout{
+    opacity: 0.5;
+}
+#logout:hover{
+    opacity: 1;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  #terrainOptions {
+    position: relative;
+    top: 15.4%;
+    right: 5%;
+    overflow: auto;
+    overflow-x: hidden;
+    transform: translateX(10.2%);
+}
+#cushionOptions {
+    position: relative;
+    top: 20%;
+    overflow: auto;
+    overflow-x: hidden;
+    transform: translateX(0%);
+}
+#heelOptions {
+    position: relative;
+    top: 11%;
+    overflow: auto;
+    overflow-x: hidden;
+    transform: translateX(0%);
+}
+
+#pronationOptions{
+    position: relative;
+    top: 10%;
+    overflow: auto;
+    overflow-x: hidden;
+    transform: translateX(8%);
+}
+#widthOptions{
+    position: relative;
+    top: 10%;
+    overflow: auto;
+    overflow-x: hidden;
+    transform: translateX(3%);
+}
+#tOption {
+    margin-top: -20%;
+    scale: 30%
+}
+#tOption:hover{
+    scale: 33%;
+}
+#cOption {
+    scale: 90%;
+}
+#cOption:hover{
+    scale: 93%;
+}
+#cOption2{
+    scale: 90%;
+
+}
+#cOption2:hover{
+    scale: 93%;
+}
+#cOption3 {
+    scale: 90%;
+}
+#cOption3:hover{
+    scale: 93%;
+}
+#cOption4 {
+    margin-top: 10%;
+    scale: 90%;
+
+}
+#cOption4:hover{
+    scale: 93%;
+}
+#hOption1 {
+    scale: 70%;
+    transform: translate(-30%, -15%);
+    padding-bottom: 50%;
+}
+#hOption1:hover{
+    scale: 73%;
+}
+#hOption2 {
+    scale: 70%;
+    transform: translate(0%, -10%);
+    padding-bottom: 55%;
+}
+#hOption2:hover{
+    scale: 73%;
+}
+
+@media all and (min-width: 1920px) {
+   #hOption1 {
+    scale: 70%;
+    transform: translate(-30%, -10%);
+    padding-bottom: 50%;
+}
+#hOption1:hover{
+    scale: 73%;
+}
+#hOption2 {
+    scale: 70%;
+    transform: translate(10%, -10%);
+    padding-bottom: 55%;
+}
+#hOption2:hover{
+    scale: 73%;
+}
+
+}
+#pOption1 {
+    margin-top: -30%;
+    margin-bottom: 60%;
+    scale: 50%;
+    transform: translate(-75%, 0%);
+}
+#pOption1:hover{
+    scale: 53%;
+}
+#pOption2 {
+    margin-top: -30%;
+    margin-bottom: 19%;
+    scale: 38%;
+    transform: translate(-70%, -30%);
+}
+#pOption2:hover{
+    scale: 43%;
+}
+#pOption3 {
+    margin-top: -20%;
+    margin-bottom: 69%;
+    scale: 60%;
+    transform: translate(-40%, 10%);
+}
+#pOption3:hover{
+    scale: 63%;
+}
+
+#wOption {
+    margin-top: -40%;
+    margin-bottom: 69%;
+    scale: 40%;
+    transform: translate(-20%, 0%);
+}
+#wOption:hover{
+    scale: 43%;
+}
+#next {
+    scale: 10%;
+    transform: translateX(-160%);
+}
+#x{
+    scale: 10%;
+    transform: translate(-10%, 180%);
+}
+#dollar{
+    scale: 30%;
+}
+#decimal{
+    scale: 30%;
+}
+#card{
+    scale: 60%;
+}
+.slidecontainer {
+    width: 100%;
+    transform: translateY(-30%);
+  }
+  
+.slider:hover {
+    opacity: 1;
+}
+  
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 100px;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #000000;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+  }
+
+  #priceView{
+    transform: translate(-5%, 0%);
+  }
+  #demo{
+    font-size: 150px;
+    transform: translate(51.5%, 60%);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    margin-bottom: -10%;
+    letter-spacing: 175px;
+  }
+
+  #priceBtn{
+    margin-top: 20%;
+  }
