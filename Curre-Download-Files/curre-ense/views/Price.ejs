@@ -1,0 +1,111 @@
+<% if (timeout) { %>
+  <div class="alert alert-primary d-flex align-items-center" role="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>
+      <div>
+        This session has timed out please <a href="/" class="alert-link" type="submit">log in</a> again.
+      </div>
+    </div>
+  <%}%>
+
+<%- include("layouts/header.ejs") %>
+  <div class="d-flex flex-row-reverse">
+    <span id="tooltip" type="submit" class="material-symbols-outlined" data-bs-toggle="tooltip" data-bs-placement="left"
+      title="Use the slider to select a price">
+      help
+    </span>
+  </div>
+  <% if (!timeout) { %>
+  <div class="d-flex" id="priceView">
+    <div class="row">
+      <div class="col-sm-2" style="text-align: center;">
+        <form action="/width" method="get">
+          <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%); margin-top: 90%;  margin-left: 20%;"></div>
+        </form>
+      </div>
+      <div class="col-sm-2" style="text-align: center;">
+        <img src="/images/dollar.png" id="dollar" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-2" style="text-align: center;">
+        <img src="/images/Vector.png" id="card" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-2" style="text-align: center;">
+        <img src="/images/Vector.png" id="card" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-2" style="text-align: center;">
+        <img src="/images/Vector.png" id="card" style="width:100%" alt="Image">
+      </div>
+      <!--div class="col-sm-1" style="text-align: center;">
+        <img src="/images/decimal.png" id="decimal" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-1" style="text-align: center;">
+        <img src="/images/Vector.png" id="card" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-1" style="text-align: center;">
+        <img src="/images/Vector.png" id="card" style="width:100%" alt="Image">
+      </div-->
+      <div class="col-sm-2" style="text-align: center;">
+        <form action="/results" method="get">
+          <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%); margin-top: 90%;  margin-left: 45%;"></div>
+        </form>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+  <% if(price < 100) {%>
+    <div id="demo"></div>
+    <%}%>
+    <%if(price >=100){%>
+      <div id = "demo" style="font-size: 150px; transform: translate(34.5%, -160%);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 800;
+      margin-bottom: -10%;
+      letter-spacing: 175px;"> </div>
+      <%}%>
+  <form action="/soption" method="post">
+  <div class="slidecontainer" style="text-align: center;">
+    <!-----value will be set to the rendered price that will be submited to the userprofile upon redirecting to the results page-->
+    <input type="range" min="50" max="415" name="sOp" value="<%= price %>" class="slider" id="myRange">
+    <input type = "submit" id="priceBtn" class="btn btn-dark btn-lg">
+  </div>
+</form>
+  <footer style="background-color: rgba(0, 0, 0, 0.5);">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" id="pageName">Select a Shoe Price</a></li>
+    </ul>
+  </footer>
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+      output.innerHTML = this.value;
+      if(this.value >= 100)
+      {
+        output.innerHTML = `<div id = "demo" style="font-size: 150px; transform: translate(0%, 0%);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 800;
+      margin-bottom: -10%;
+      letter-spacing: 175px;">` + this.value +'</div';
+      }
+    }
+   
+  </script>
+  <%}%>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  </body>
+
+  </html>

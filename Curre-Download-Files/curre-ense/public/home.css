@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital@1&display=swap');
+body, html{
+    height: 100%;
+    background-color: black;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#container2{
+    /*background-image: url(/public/images/homeBg.png);*/
+    background-image: url(/images/homeBg.png);
+    height: 100%;
+    width: auto;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.navbar-brand{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+#Home{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    
+    line-height: 30px;
+}
+#About{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+#Contact{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#iconbg{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+#iconContainer{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20%;
+    line-height: 144px;
+    color: #FFFFFF;
+    max-width: 500px;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#welcome{
+    font-size: 2500%;
+    padding-bottom: 3%;
+}
+
+.display-1{
+   
+padding-top: 2%;
+padding-bottom: 2%;
+}
+#description{
+    padding: 0%;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-top: 1%;
+    line-height: 30px;
+}

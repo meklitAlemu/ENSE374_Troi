@@ -1,0 +1,35 @@
+<% if (timeout) { %>
+    <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+        <div>
+          This session has timed out please <a href="/" class="alert-link" type="submit">log in</a> again.
+        </div>
+      </div>
+    <%}%>
+    <%- include("layouts/header.ejs") %>
+    <div class="d-flex flex-row-reverse">
+        <span id="tooltip" type="submit" class="material-symbols-outlined" data-bs-toggle="tooltip"
+            data-bs-placement="left" title="The greater the cushioning or sponginess in a given shoe, the less efficiently force is transferred between the foot (the big toe, really) and the ground. Energy that would otherwise go into propulsion is dispersed throughout the shoe’s padding and wasted. It’s a similar effect (though obviously less extreme) to running in sand. In people who ambulate in bare feet or in minimalist footwear, a maximum amount of propulsive energy is transferred between the foot and the ground during the toe-off phase of gait, and considerably less energy is wasted with each step or stride.">
+            help
+        </span>
+    </div>
+    <%- include("partials/cushionModules.ejs", { option : cushion }) -%>
+        <footer style="background-color: rgba(0, 0, 0, 0.5);">
+              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" id="pageName">Select a Cushion Level</a></li>
+              </ul>
+            </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+</body>
+
+</html>

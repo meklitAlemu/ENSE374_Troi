@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="results.css">
+    <title>Curre</title>
+</head>
+
+<body style="background-color: rgba(18, 21, 39, 0.86)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Curre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" id="Home" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" id="About" href="/about">About</a>
+                    <a class="nav-link" id="Contact" href="/contact">Contact</a>
+                </div>
+                <span class="navbar-text px-5" style="color: white ;">
+                    <form action="/logout" method="post" class="d-flex">
+                        <input type="image" src="/images/logout-v2.png" id ="logout"width="25px" height="25px" alt="submit">
+                    </form>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <% if (timeout) { %>
+      <div class="alert alert-primary d-flex align-items-center" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          <div>
+            This session has timed out please <a href="/" class="alert-link" type="submit">log in</a> again.
+          </div>
+        </div>
+      <%}%>
+      <% if (!timeout) { %>
+    <div class="container py-3">
+      <div class="row">
+          <div class="col-12 col-sm-6 col-lg-8 text-center text-lg-start mb-3 mb-lg-0">
+              <span> <h1 class="title" class="h1">Your Personalized Recommondation </h1></span>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 text-center text-lg-end mb-3 mb-lg-0">
+              <div class="btn-group" role="group" aria-label="Product Toggle">
+                  <a class="btn btn-secondary" data-bs-toggle="collapse" href="#productcat" role="button" aria-expanded="false" aria-controls="productcat">Categories</a>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#products" role="button" aria-expanded="true" aria-controls="products" style="background-color: rgba(35, 47, 60, 1);">Products</a>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#discover" role="button" aria-expanded="true" aria-controls="discover" style="background-color: rgba(35, 47, 60, 1);">Discover</a>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <section id="productcat" class="collapse multi-collapse">
+    <div class="container py-5">
+      <div class="row pb-3">
+        <div class="col-12 text-start">
+          <h2 class="title" class="h2">Understand Results</h2>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-lg-4 g-3">
+        <div class="col">
+          <div class="card card-product-category h-100 mb-2">
+            <div class="card-body" style="background-image: linear-gradient(rgba(172, 193, 207, 1), rgba(62, 118, 138, 1));">
+              <h3 class="card-title">Terrain</h3>
+              <h4><%=terrain%></h4>
+              <p class="card-text">Whether you’re a running rookie or an exercise expert, the terrain you choose to train on can make a huge difference to your workout.</p>
+              <a href="https://www.trespass.com/advice/best-running-terrains/" target="_blank" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-product-category h-100 mb-2">
+            <div class="card-body" style="background-image: linear-gradient(rgba(172, 193, 207, 1), rgba(62, 118, 138, 1));">
+              <h3 class="card-title">Cushioning</h3>
+              <h4><%=cushion%></h4>
+              <p class="card-text">
+                Stack height or cushioning refers to the amount of material between feet and the ground; here's a quick explanation...</p>
+                <a href="https://runrepeat.com/guides/stack-height-tool-data-guide" target="_blank" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-product-category h-100 mb-2">
+            <div class="card-body" style="background-image: linear-gradient(rgba(172, 193, 207, 1), rgba(62, 118, 138, 1));">
+              <h3 class="card-title">Heel Drop</h3>
+              <h4><%=heel_drop%></h4>
+              <p class="card-text">
+                Heel drop is something that usually worries advanced runners. If you’re only at the beginning of your running adventure, this is not something to worry about.</p>
+                <a href="https://runrepeat.com/guides/heel-to-toe-drop" target="_blank" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-product-category h-100 mb-2">
+            <div class="card-body" style="background-image: linear-gradient(rgba(172, 193, 207, 1), rgba(62, 118, 138, 1));">
+              <h3 class="card-title">Pronation</h3>
+              <h4><%=pronation%></h4>
+              <p class="card-text">
+                If your runs are comfortable with no issues, don’t bother with pronation. However, if you’re experiencing discomfort, it’s always best to consult a specialist</p>
+              <a href="https://runrepeat.com/guides/pronation-running-shoes-diy-analysis-injuries" target="_blank" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-product-category h-100 mb-2">
+            <div class="card-body" style="background-image: linear-gradient(rgba(172, 193, 207, 1), rgba(62, 118, 138, 1));">
+              <h3 class="card-title">Width</h3>
+              <h4><%=width%></h4>
+              <p class="card-text">
+                Tips on how to measure shoe size, check shoe fit, and read conversion chart.
+              </p>
+              <a href="https://www.runningwarehouse.com/learningcenter/gear_guides/footwear/fittips.html" target="_blank" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="discover" class="collapse multi-collapse">
+    <div class="container py-5">
+      <div class="row pb-3">
+        <div class="col-12 text-start">
+          <h2 class="title" class="h2">Learn More</h2>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-lg-4 g-3">
+        <div class="col">
+          <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1623868124616-4859bbf79504?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Bologna">
+           <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+             <h4 class="card-title">When to Replace Your Running Shoes</h4>
+             <p class="card-text">It's hard to part with your trusty pair of shoes, but knowing when to set them aside and lace up a new pair is important to your running performance and comfort.
+            </p>
+             <a href="https://www.rei.com/learn/expert-advice/replace-shoes.html" target="_blank" class="stretched-link"></a>
+           </div>
+         </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1577466803092-390dead202bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Bologna">
+           <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+             <h4 class="card-title">How to Clean Running Shoes</h4>
+             <p class="card-text">Running shoes aren’t high maintenance, but they do require a little care and cleaning along the way...</p>
+             <a href="https://www.rei.com/learn/expert-advice/cleaning-running-shoes.html" target="_blank" class="stretched-link"></a>
+           </div>
+         </div>
+       </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1600653066490-177a8311e9f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Bologna">
+         <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+           <h4 class="card-title">How to Start Running</h4>
+           <p class="card-text">With a good pair of running shoes, you can step out your door and get going—and you can do it at just about any age.
+          </p>
+           <a href="https://www.rei.com/learn/expert-advice/running-basics.html" target="_blank" class="stretched-link"></a>
+         </div>
+       </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img" src="/images/shoesLayer.jpg" alt="Bologna" style="height: 465px;">
+         <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+           <h4 class="card-title">How to choose the best insoles for running and walking</h4>
+           <p class="card-text">But before you embark on an insole-hunting journey, make sure you have the right shoes!</p>
+          </p>
+           <a href="https://runrepeat.com/guides/best-insoles-for-running-and-walking" target="_blank" class="stretched-link"></a>
+         </div>
+       </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Bologna">
+         <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+           <h4 class="card-title">Trail-Running Checklist</h4>
+           <p class="card-text">Comphrehesive list inlcuding clothing, food, gear and accessories so you won't forget anything
+          </p>
+           <a href="https://www.rei.com/learn/expert-advice/trail-running-checklist.html" target="_blank" class="stretched-link"></a>
+         </div>
+       </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1559963043-3d19915bec6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" style="height: 465px;" alt="Bologna">
+         <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+           <h4 class="card-title">Running Cadence</h4>
+           <p class="card-text">This guide covers all: from what cadence is and how to improve it.
+          </p>
+           <a href="https://runrepeat.com/guides/what-is-running-cadence" target="_blank" class="stretched-link"></a>
+         </div>
+       </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1586348052423-035b02a15fd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Bologna">
+         <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+           <h4 class="card-title">Arch Support for Runners: What, How and Why</h4>
+           <p class="card-text">Arch support is not a quick fix. But, can running shoes with arch support improve your running experience? Yes!
+          </p>
+           <a href="https://runrepeat.com/guides/arch-support-for-runners-in-depth-guide" target="_blank" class="stretched-link"></a>
+         </div>
+       </div>
+      </div>
+      </div>
+    </div>
+  </section> 
+  <section id="products" class="collapse multi-collapse show">
+    <div class="container py-5">
+      <div class="row pb-3">
+        <div class="col-12 text-start">
+          <h2 class ="title" class="h2">Product Examples</h2>
+        </div>
+      </div>
+      <div class="products row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-5">
+        <% for (result of Results) {%>
+          <div class="product col">
+            <div class="card card-product shadow-sm h-100">
+              <img src=<%= result.img%> alt=''>
+              <div class="card-body" style="background-color: rgba(43, 51, 63, 0.7)">
+                <p class="card-text" class="h3">$<%= result.price%></p>
+                <h2 class="card-title" class="h3"><%= result.description%></h2>
+                <a href="<%= result.link%>" class="btn btn-dark rounded-pill px-4" style="background-color: rgba(35, 47, 60, 1);">View Product</a>
+              </div>
+            </div>
+          </div>
+          <%}%>
+      </div>
+    </div>
+  </section>
+  <%}%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+
+</html>

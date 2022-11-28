@@ -1,0 +1,61 @@
+[{
+    "_id": 0,
+    "terrain_type": "Road"
+}, 
+{
+    "_id": 1,
+    "terrain_type": "Trail"
+}, 
+{
+    "_id": 2,
+    "terrain_type": "Gravel"
+}, 
+{
+    "_id": 0,
+    "cushion_level": "Maximum"
+}, 
+{
+    "_id": 1,
+    "cushion_level": "Moderate"
+}, 
+{
+    "_id": 2,
+    "cushion_level": "Minimal"
+}, 
+{
+    "_id": 3,
+    "cushion_level": "Barefoot"
+}, 
+{
+    "_id": 0,
+    "heel_drop": false
+}, 
+{
+    "_id": 1,
+    "heel_drop": true
+}, 
+{
+    "_id": 0,
+    "pronation_type": "Overpronation"
+}, 
+{
+    "_id": 1,
+    "pronation_type": "Neutral"
+}, 
+{
+    "_id": 2,
+    "pronation_type": "Supination"
+}, 
+{
+    "_id": 0,
+    "width_level": "Wide"
+}, 
+{
+    "_id": 1,
+    "width_level": "Regular"
+}, 
+{
+    "_id": 2,
+    "width_level": "Narrow"
+}
+]

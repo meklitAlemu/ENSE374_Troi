@@ -1,0 +1,5 @@
+web: node index.js 
+SECRET=Something secret to encrypt our session
+DB_HOST=localhost
+DB_USER=root
+MONGODB_URI=mongodb+srv://Troi:ense374@cluster0.rwroeyh.mongodb.net/Shoe
