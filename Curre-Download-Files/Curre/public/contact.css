@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital@1&display=swap');
+.navbar-brand{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+body, html{
+    font-family: Inter;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: url(/images/homeBg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Home{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    
+    line-height: 30px;
+}
+#About{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+#Contact{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+.d-flex{
+    position: relative;
+    margin-top: 10%;
+}
+.card{
+    background-color: rgba(167, 167, 167, 0.212);
+    box-shadow: 0px 0px 5px lightgrey;
+}
+.btn{
+    background-color: rgb(43, 43, 43);
+    border-color: white;
+}

@@ -1,0 +1,362 @@
+<% if (cushion===0) {%>
+    <div class="container-fluid col-md-12" id="cushionOptions">
+        <div class="row no-gutters">
+            <div class="col-md-2">
+                <form action="/terrain" method="get">
+                    <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                </form>
+            </div>
+            <div class="col-md-2" style="text-align: center;">
+                <h5>Maximum</h5>
+                <form action="/coption" method="post">
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input src="/images/Cushion_Levels-1.png" id="cOption" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                <!--send chosen options through mvc post method-->
+                                <input name="cOp" value="0" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12" width="100px">
+                            <div class="row d-flex justify-content-center">
+                                <button class="btn btn-primary btn-circle btn-xl" type="submit" disabled style="margin-top: 110%;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2" style="text-align: center;">
+                <h5>Moderate</h5>
+                <form action="/coption" method="post">
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input name="cOp" value="1" hidden="">
+                                <!--create image submit buttons for the active buttons and none for the disabled-->
+                                <input src="/images/Cushion_Levels-2.png" id="cOption2" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                            </div>
+                        </div>
+                        <div class="col-sm-12" width="100px">
+                            <div class="row d-flex justify-content-center">
+                                <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 90%;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2" style="text-align: center;">
+                <h5>Minimal</h5>
+                <form action="/coption" method="post" id="terrainForm">
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input src="/images/Cushion_Levels-3.png" id="cOption3" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                <input name="cOp" value="2" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12" width="100px">
+                            <div class="row d-flex justify-content-center">
+                                <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 102%;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2" style="text-align: center;">
+                <h5>Barefoot</h5>
+                <form action="/coption" method="post" id="terrainForm">
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input src="/images/Cushion_Levels-4.png" id="cOption4" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                <input name="cOp" value="3" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-sm-12" width="100px">
+                            <div class="row d-flex justify-content-center">
+                                <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 102%;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2">
+                <form action="/heel_drop" method="get">
+                    <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%}%>
+        <% if (cushion===1) {%>
+            <div class="container-fluid col-md-12" id="cushionOptions">
+                <div class="row no-gutters">
+                    <div class="col-md-2">
+                        <form action="/terrain" method="get">
+                            <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                        </form>
+                    </div>
+                    <div class="col-md-2" style="text-align: center;">
+                        <h5>Maximum</h5>
+                        <form action="/coption" method="post">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input src="/images/Cushion_Levels-1.png" id="cOption" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                        <!--send chosen options through mvc post method-->
+                                        <input name="cOp" value="0" hidden="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" width="100px">
+                                    <div class="row d-flex justify-content-center">
+                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 110%;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2" style="text-align: center;">
+                        <h5>Moderate</h5>
+                        <form action="/coption" method="post">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input name="cOp" value="1" hidden="">
+                                        <!--create image submit buttons for the active buttons and none for the disabled-->
+                                        <input src="/images/Cushion_Levels-2.png" id="cOption2" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" width="100px">
+                                    <div class="row d-flex justify-content-center">
+                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" disabled style="margin-top: 90%;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2" style="text-align: center;">
+                        <h5>Minimal</h5>
+                        <form action="/coption" method="post" id="terrainForm">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input src="/images/Cushion_Levels-3.png" id="cOption3" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                        <input name="cOp" value="2" hidden="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" width="100px">
+                                    <div class="row d-flex justify-content-center">
+                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 102%;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2" style="text-align: center;">
+                        <h5>Barefoot</h5>
+                        <form action="/coption" method="post" id="terrainForm">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input src="/images/Cushion_Levels-4.png" id="cOption4" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                        <input name="cOp" value="3" hidden="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" width="100px">
+                                    <div class="row d-flex justify-content-center">
+                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 102%;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <form action="/heel_drop" method="get">
+                            <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+                <% if (cushion===2) {%>
+                    <div class="container-fluid col-md-12" id="cushionOptions">
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <form action="/terrain" method="get">
+                                    <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                                </form>
+                            </div>
+                            <div class="col-md-2" style="text-align: center;">
+                                <h5>Maximum</h5>
+                                <form action="/coption" method="post">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input src="/images/Cushion_Levels-1.png" id="cOption" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                                <!--send chosen options through mvc post method-->
+                                                <input name="cOp" value="0" hidden="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12" width="100px">
+                                            <div class="row d-flex justify-content-center">
+                                                <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 110%;"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-2" style="text-align: center;">
+                                <h5>Moderate</h5>
+                                <form action="/coption" method="post">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input name="cOp" value="1" hidden="">
+                                                <!--create image submit buttons for the active buttons and none for the disabled-->
+                                                <input src="/images/Cushion_Levels-2.png" id="cOption2" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12" width="100px">
+                                            <div class="row d-flex justify-content-center">
+                                                <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 90%;"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-2" style="text-align: center;">
+                                <h5>Minimal</h5>
+                                <form action="/coption" method="post" id="terrainForm">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input src="/images/Cushion_Levels-3.png" id="cOption3" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                                <input name="cOp" value="2" hidden="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12" width="100px">
+                                            <div class="row d-flex justify-content-center">
+                                                <button class="btn btn-primary btn-circle btn-xl" type="submit" disabled style="margin-top: 102%;"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-2" style="text-align: center;">
+                                <h5>Barefoot</h5>
+                                <form action="/coption" method="post" id="terrainForm">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input src="/images/Cushion_Levels-4.png" id="cOption4" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                                <input name="cOp" value="3" hidden="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12" width="100px">
+                                            <div class="row d-flex justify-content-center">
+                                                <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 102%;"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-2">
+                                <form action="/heel_drop" method="get">
+                                    <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+                        <% if (cushion===3) {%>
+                            <div class="container-fluid col-md-12" id="cushionOptions">
+                                <div class="row no-gutters">
+                                    <div class="col-md-2">
+                                        <form action="/terrain" method="get">
+                                            <div><input src="/images/fast-backward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: center;">
+                                        <h5>Maximum</h5>
+                                        <form action="/coption" method="post">
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input src="/images/Cushion_Levels-1.png" id="cOption" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                                        <!--send chosen options through mvc post method-->
+                                                        <input name="cOp" value="0" hidden="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12" width="100px">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 110%;"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: center;">
+                                        <h5>Moderate</h5>
+                                        <form action="/coption" method="post">
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input name="cOp" value="1" hidden="">
+                                                        <!--create image submit buttons for the active buttons and none for the disabled-->
+                                                        <input src="/images/Cushion_Levels-2.png" id="cOption2" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12" width="100px">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 90%;"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: center;">
+                                        <h5>Minimal</h5>
+                                        <form action="/coption" method="post" id="terrainForm">
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input src="/images/Cushion_Levels-3.png" id="cOption3" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit">
+                                                        <input name="cOp" value="2" hidden="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12" width="100px">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" active style="margin-top: 102%;"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: center;">
+                                        <h5>Barefoot</h5>
+                                        <form action="/coption" method="post" id="terrainForm">
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <input src="/images/Cushion_Levels-4.png" id="cOption4" class="img-responsive" width="100%" height="auto" type="image" name="submit" alt="submit" style="text-align: center;">
+                                                        <input name="cOp" value="3" hidden="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12" width="100px">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <button class="btn btn-primary btn-circle btn-xl" type="submit" disabled style="margin-top: 102%;"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <form action="/heel_drop" method="get">
+                                            <div><input src="/images/fast-forward.png" type="image" class="img-responsive" width="100%" height="100%" name="submit" alt="submit" style="transform: scale(26%);"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
