@@ -10,7 +10,7 @@ Our project idea is to create a website that provides both novice and expert run
 We have observed that there is an overwhelming amount of considerations to be made before the purchase of running shoes. The appropriate type of shoes for the user will be determined by the user's foot structure and over all balance, as well as the environment they will be running in among other things. 
 Our goal with this endeavour is to improve the overall experience of newcomers to running while ensuring that they will be safe and healthy whilst running.
 
-#Visit our website!
+# Visit our website!
 
 [Curre web app](https://curre-ense.herokuapp.com)
  
