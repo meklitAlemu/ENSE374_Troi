@@ -60,7 +60,7 @@
       font-style: normal;
       font-weight: 800;
       margin-bottom: -10%;
-      letter-spacing: 175px;"> </div>
+      letter-spacing: 100%;"> </div>
     <%}%>
     <%if(price >=100){%>
       <div id = "demo" style="font-size: 150px; transform: translate(34.5%, -160%);
@@ -68,8 +68,9 @@
       font-style: normal;
       font-weight: 800;
       margin-bottom: -10%;
-      letter-spacing: 175px;"> </div>
+      letter-spacing: 100%;"> </div>
       <%}%>
+      
   <form action="/soption" method="post">
   <div class="slidecontainer" style="text-align: center;">
     <!-----value will be set to the rendered price that will be submited to the userprofile upon redirecting to the results page-->
@@ -86,7 +87,9 @@
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     output.innerHTML = slider.value;
-
+    //code to render the slider
+    // the slider nubers are not responsively resizeable and must be resized manually
+    // glitches in the ui can be resolved by resizing the window--a permanent solution has yet to be found
     slider.oninput = function () {
       output.innerHTML = this.value;
       if(this.value >= 100)
@@ -97,6 +100,24 @@
       font-weight: 800;
       margin-bottom: -10%;
       letter-spacing: 175px;">` + this.value +'</div';
+      }
+      if(this.value >= 100 && window.innerWidth >= 1800)
+      {
+        output.innerHTML = `<div id = "demo" style="font-size: 150px; transform: translate(0%, 0%);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 800;
+      margin-bottom: -10%;
+      letter-spacing: 240px;">` + this.value +'</div';
+      }
+      if(this.value <= 100 && window.innerWidth >= 1800)
+      {
+        output.innerHTML = `<div id = "demo" style="font-size: 150px; transform: translate(0%, 0%);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 800;
+      margin-bottom: -10%;
+      letter-spacing: 240px;">` + this.value +'</div';
       }
     }
    
