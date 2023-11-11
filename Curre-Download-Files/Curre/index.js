@@ -178,6 +178,7 @@ else{
 }
 });
 app.get('/price', (req, res) => {
+    var b = false;
     var s;
     var timeout;
     //only render if user is authenticated
@@ -188,7 +189,7 @@ app.get('/price', (req, res) => {
             console.log("results length: " + results.length); //should find only 1 road terrain
             s = results[0].price;
             console.log("price value: " + s);
-            res.render("Price", {price: s, timeout: timeout});
+            res.render("Price", {price: s, timeout: timeout, bool: b});
         } catch (error) {
             console.log(error);
         }
