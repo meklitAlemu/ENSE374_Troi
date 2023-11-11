@@ -18,9 +18,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Shoe',
 // this is a canonical alias to make your life easier, like jQuery to $.
 const app = express(); 
 app.set("view engine", "ejs");
-
+app.set('views', __dirname + '/views');
 
 app.use(express.static("public"));
+app.use(express.static(__dirname + "/public/"));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
